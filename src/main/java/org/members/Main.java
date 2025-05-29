@@ -87,7 +87,7 @@ public class Main {
                         apiResponse.items[i].startTime);
                 fileWriter.write(line);
             }
-
+            fileWriter.close();
             System.out.println("File saved to: " + filename);
         }catch(IOException exception){
             System.out.println("Error writing file: " + exception.getMessage());
