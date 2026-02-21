@@ -32,7 +32,7 @@ public class Main {
 
         ApiResponse users = GetUsers(apiKey, owner, pageSize, page);
 
-        if (users == null){
+        if (users.totalCount == 0 || users.items == null){
             System.out.println("Error getting the users: users object is null");
         }else{
             System.out.println("Enter file name");
